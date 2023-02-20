@@ -24,8 +24,10 @@ def compute_height(n, parents):
 
 def main():
     let = input()[0]
+    print(let)
     if let == 'F' :
         text = input()
+        print(text)
         if 'a' in text:
             return
         with open(text) as file:
