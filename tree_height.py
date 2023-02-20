@@ -24,15 +24,14 @@ def compute_height(n, parents):
 
 def main():
     let = input()[0]
-    print(let)
     if let == 'F' :
-        text = input()
+        text = "./text/" + input()
         print(text)
         if 'a' in text:
             return
         with open(text) as file:
-            n = file.read()
-            nums = [int(i) for i in file.readlines()[1].split(' ')]         
+            n = file.readline()
+            nums = [int(i) for i in file.readline().split(' ')]         
     elif let == 'I' :
         n = int(input()[0])
         nums = [int(i) for i in input().split(' ')]
