@@ -27,9 +27,9 @@ def main():
     if let == 'F' :
         text = input()
         if(int(text)<10):
-            text = sys.path[0]+ "/test/0" + input()
+            text = sys.path[0]+ "/test/0" + text
         else:
-            text = sys.path[0]+ "/test/" + input()
+            text = sys.path[0]+ "/test/" + text
         print(text)
         if 'a' in text:
             return
