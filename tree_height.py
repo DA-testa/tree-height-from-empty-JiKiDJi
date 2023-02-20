@@ -25,7 +25,7 @@ def compute_height(n, parents):
 def main():
     let = input()[0]
     if let == 'F' :
-        text = "./text/" + input()
+        text = "./text/" + input() +".txt"
         print(text)
         if 'a' in text:
             return
