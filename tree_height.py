@@ -6,15 +6,21 @@ import threading
 
 def compute_height(n, parents):
     max_height = 0
+    heights = [0]*n
     for i in range(n):
         t = i
         height = 1
         while(parents[t]!=-1):
-            t = parents[t]
-            height+=1
-            if (height>n):
-                height = 0
+            if (t<i):
+                height += heights[t]-1
                 break
+            else:
+                t = parents[t]
+                height+=1
+            # if (height>n):
+            #     height = 0
+            #     break
+        heights[i] = height
         if (height > max_height):
             max_height = height
     # Write this function
@@ -26,22 +32,22 @@ def main():
     let = input()[0]
     if let == 'F' :
         text = input()
+        if 'a' in text:
+            return
         if(int(text)<10):
             text = sys.path[0]+ "/test/0" + text
         else:
             text = sys.path[0]+ "/test/" + text
         print(text)
-        if 'a' in text:
-            return
         with open(text) as file:
             n = int(file.readline())
             nums = [int(i) for i in file.readline().split(' ')]         
     elif let == 'I' :
-        n = int(input()[0])
+        n = int(input())
         nums = [int(i) for i in input().split(' ')]
     else: 
         return
-#     print(n)
+    # print(n)
 #     print(nums)
 #     print()
     print(compute_height(n,nums))
