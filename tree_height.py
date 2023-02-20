@@ -30,16 +30,16 @@ def main():
         if 'a' in text:
             return
         with open(text) as file:
-            n = file.readline()
+            n = int(file.readline())
             nums = [int(i) for i in file.readline().split(' ')]         
     elif let == 'I' :
         n = int(input()[0])
         nums = [int(i) for i in input().split(' ')]
     else: 
         return
-    print(n)
-    print(nums)
-    print()
+#     print(n)
+#     print(nums)
+#     print()
     print(compute_height(n,nums))
 
 sys.setrecursionlimit(10**7)  # max depth of recursion
