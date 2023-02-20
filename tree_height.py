@@ -34,10 +34,7 @@ def main():
         text = input()
         if 'a' in text:
             return
-        if(int(text)<10):
-            text = sys.path[0]+ "/test/0" + text
-        else:
-            text = sys.path[0]+ "/test/" + text
+        text = sys.path[0]+ "/test/" + text
         print(text)
         with open(text) as file:
             n = int(file.readline())
