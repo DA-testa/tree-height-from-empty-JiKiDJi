@@ -12,9 +12,9 @@ def compute_height(n, parents):
         while(parents[t]!=-1):
             t = parents[t]
             height+=1
-        if (height>n):
-            height = 0
-            break
+            if (height>n):
+                height = 0
+                break
         if (height > max_height):
             max_height = height
     # Write this function
@@ -25,7 +25,7 @@ def compute_height(n, parents):
 def main():
     let = input()[0]
     if let == 'F' :
-        text = sys.path[0]+ "text/" + input() +".txt"
+        text = sys.path[0]+ "/text/" + input() +".txt"
         print(text)
         if 'a' in text:
             return
